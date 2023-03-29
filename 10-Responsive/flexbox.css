@@ -1,0 +1,25 @@
+.contenedor {
+    display: flex;
+    gap: 1rem;
+    background-color: lightblue;
+    padding: 0.5rem;
+    min-height: 30rem;
+
+    /* Eje principal */
+    justify-content: space-evenly;
+    /* Eje secundario */
+    align-items: center;
+
+    flex-wrap: wrap;
+    /* https://codepen.io/enxaneta/full/adLPwv/ */
+}
+
+.item {
+    background-color: lightgreen;
+    padding: 0.25rem;
+    width: 10rem;
+}
+
+/* .item2 {
+    align-self: stretch;
+} */

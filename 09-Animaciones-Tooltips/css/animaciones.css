@@ -1,0 +1,40 @@
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: #29bff1;
+}
+
+.child {
+    width: 50%;
+    height: 50%;
+    background-color: #c58ef1;
+    /* transition: transform 1s ease-in 2s; */
+    animation: traslacion 2s ease-in-out infinite forwards alternate;
+
+}
+
+.container:hover .child{
+    /* transform: translateX(100%);
+    background-color: #984cdf; */
+    animation-play-state: paused;
+}
+
+@keyframes traslacion {
+    0% {
+        background-color: #c58ef1;
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(100%) translateY(0%);
+    }
+    50% {
+        transform: translateX(100%) translateY(100%);
+    }
+    75% {
+        transform: translateX(0%) translateY(100%);
+    }
+    100% {
+        background-color: #984cdf;
+        transform: translateX(0%) translateY(0%);
+    }
+}

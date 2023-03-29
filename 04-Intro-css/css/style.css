@@ -1,0 +1,7 @@
+#Elemento1 {
+    color: red;
+}
+
+ul li#Elemento1 {
+    font-size: 2rem;
+}

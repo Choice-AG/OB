@@ -1,0 +1,10 @@
+
+
+#img {
+    width: 300px;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}
