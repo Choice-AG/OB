@@ -1,0 +1,103 @@
+@use "sass:string";
+@use "sass:math";
+@use "sass:list";
+@use "sass:selector";
+@use "sass:color";
+
+//// Funciones con cadenas de texto
+@debug "hola";
+@debug string.index("Helvetica Neue", "Neue");
+
+$string: "Helvetica";
+$newString: string.insert($string, " Bold", 10);
+
+@debug $newString;
+@debug string.length($newString);
+@debug string.slice($newString, 5, 9);
+
+@debug string.to-upper-case("Roboto Mono");
+@debug string.to-lower-case("Roboto Mono");
+
+@debug string.unique-id();
+
+//// Funciones con números
+@debug math.$e;
+@debug math.$pi;
+
+@debug math.ceil(4.5);
+@debug math.ceil(4);
+@debug math.floor(4.5);
+@debug math.floor(4);
+@debug math.round(4.4);
+@debug math.round(4.5);
+
+$min: 0;
+$max: 10;
+$number: 100;
+@debug math.clamp($min, $number, $max);
+
+@debug math.max(3, 4, 6, 10, 222, 2);
+@debug math.min(3, 4, 6, 10, 222, 2);
+
+@debug math.abs(8);
+@debug math.abs(-8);
+
+@debug math.pow(2, 12);
+@debug math.pow(2, math.abs(-12));
+
+@debug math.cos(math.$pi);
+@debug math.acos(math.$pi);
+@debug math.sin(math.$pi);
+@debug math.asin(math.$pi);
+@debug math.tan(math.$pi);
+@debug math.atan(math.$pi);
+
+//// Funciones con listas
+$lista1: 10px, 10px, 0px, 15px;
+
+@debug $lista1;
+@debug list.append($lista1, 25px, space);
+
+$borderCustom: solid 1px black;
+@debug list.index($borderCustom, 1px); // 2
+@debug list.index($borderCustom, 2px); // null
+@debug list.index($borderCustom, solid); // 1
+
+// $border2: [solid 1px, black];
+// @debug list.is-bracketed($border2);
+
+@debug list.join($lista1, $borderCustom, auto);
+@debug list.length(list.join($lista1, $borderCustom, auto));
+@debug list.separator(list.join($lista1, $borderCustom, auto));
+@debug list.separator($borderCustom);
+
+
+@debug list.set-nth($borderCustom, 2, 2px);
+
+//// Funciones de selector
+$selector-1: "a";
+$selector-2: ".disabled";
+@debug selector.append($selector-1, $selector-2);
+
+//// Fucniones de color
+
+$color: #e251ff;
+@debug color.adjust($color, $red: -50, $alpha: -0.5);
+$color-2: #b051ff80;
+
+@debug color.complement($color);
+$color-comp: #6eff51;
+@debug darken($color, 20%);
+$color-dark: #c300ea;
+@debug lighten($color, 20%);
+$color-light: #f3b7ff;
+
+@debug color.green($color);
+@debug color.red($color);
+@debug color.blue($color);
+
+
+@debug color.hue($color);
+
+@debug color.invert($color);
+$color-in: #1dae00;
