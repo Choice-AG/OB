@@ -44,7 +44,7 @@ $color-main: #0075FF;
 .main-menu {
     margin-bottom: 0;
     li {
-        margin-left: 40px;
+        margin-right: 2rem;
         font-size: 1rem;
         list-style: none;
         display: inline;
@@ -60,20 +60,20 @@ $color-main: #0075FF;
 
 .icon-sm {
     i {
-        font-size: 0.75rem;
-        padding: 0.1rem 0.25rem;
+        font-size: 1.25rem;
+        padding: 0.4rem 0.65rem;
         border-radius: 50%;
         box-shadow: 0 0 10px #00000055;
         color: $color-main;
     }
 }
 
-.feature {
+.benefit {
     display: flex;
     flex-direction: column;
-    .icon {
+    i {
         color: $color-main;
-        font-size: 10rem;
+        font-size: 7.5rem;
         text-align: center;
     }
     .description {
